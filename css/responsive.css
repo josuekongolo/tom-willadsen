@@ -1,0 +1,622 @@
+/* ==========================================================================
+   Tom Willadsen Mur og Flis, Snekkeri - Responsive Styles
+   Mobile First Approach
+   ========================================================================== */
+
+/* Large Desktop (1200px+)
+   ========================================================================== */
+@media (min-width: 1200px) {
+    .hero__title {
+        font-size: var(--text-5xl);
+    }
+
+    .nav__cta {
+        display: inline-flex;
+    }
+}
+
+/* Desktop (1024px - 1199px)
+   ========================================================================== */
+@media (max-width: 1199px) {
+    .hero__title {
+        font-size: var(--text-4xl);
+    }
+
+    .footer__grid {
+        grid-template-columns: 1.3fr 1fr 1fr 1fr;
+        gap: var(--space-8);
+    }
+}
+
+/* Tablet (768px - 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    /* Header & Navigation */
+    .nav__list {
+        display: none;
+    }
+
+    .nav__cta {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: calc(var(--header-height) + var(--space-12)) 0 var(--space-12);
+    }
+
+    .hero__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .hero__title {
+        font-size: var(--text-4xl);
+    }
+
+    .hero__image {
+        order: -1;
+    }
+
+    .hero__image img {
+        height: 350px;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+
+    /* Service Area */
+    .service-area {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .service-area__map {
+        order: -1;
+        min-height: 300px;
+    }
+
+    /* Service Blocks */
+    .service-block {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .service-block--reverse .service-block__image {
+        order: 0;
+    }
+
+    .service-block__image img {
+        height: 300px;
+    }
+
+    /* About */
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .about-intro__image {
+        order: -1;
+    }
+
+    .about-intro__image img {
+        height: 350px;
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Area Detail */
+    .area-detail__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Pricing Grid */
+    .pricing__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .contact-form-wrapper {
+        order: -1;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+
+    .footer__brand {
+        grid-column: span 2;
+    }
+}
+
+/* Large Mobile (576px - 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Typography */
+    h1 {
+        font-size: var(--text-3xl);
+    }
+
+    h2 {
+        font-size: var(--text-2xl);
+    }
+
+    h3 {
+        font-size: var(--text-xl);
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--space-4);
+    }
+
+    /* Sections */
+    .section {
+        padding: var(--space-12) 0;
+    }
+
+    .section__header {
+        margin-bottom: var(--space-8);
+    }
+
+    .section__header p {
+        font-size: var(--text-base);
+    }
+
+    /* Header */
+    .header__inner {
+        padding: 0 var(--space-4);
+    }
+
+    .header__logo-text {
+        display: none;
+    }
+
+    /* Quick Contact */
+    .quick-contact__inner {
+        gap: var(--space-4);
+    }
+
+    .quick-contact__item span {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: calc(var(--header-height) + var(--space-8)) 0 var(--space-8);
+    }
+
+    .hero__badge {
+        font-size: var(--text-xs);
+        padding: var(--space-1) var(--space-3);
+        margin-bottom: var(--space-4);
+    }
+
+    .hero__title {
+        font-size: var(--text-3xl);
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-6);
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero__image img {
+        height: 280px;
+    }
+
+    .hero__image-badge {
+        padding: var(--space-3);
+        left: var(--space-4);
+        bottom: var(--space-4);
+    }
+
+    .hero__image-badge-title {
+        font-size: var(--text-base);
+    }
+
+    /* Introduction */
+    .intro__text {
+        font-size: var(--text-base);
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .service-card {
+        padding: var(--space-6);
+    }
+
+    .service-card__icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item {
+        text-align: left;
+    }
+
+    /* Service Area */
+    .service-area__list {
+        grid-template-columns: 1fr;
+    }
+
+    .service-area__map {
+        min-height: 250px;
+    }
+
+    .service-area__map iframe {
+        min-height: 250px;
+    }
+
+    /* Trust */
+    .trust {
+        padding: var(--space-12) 0;
+    }
+
+    .trust__text {
+        font-size: var(--text-base);
+    }
+
+    /* CTA */
+    .cta {
+        padding: var(--space-12) 0;
+    }
+
+    .cta__text {
+        font-size: var(--text-base);
+    }
+
+    .cta__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta__buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: calc(var(--header-height) + var(--space-10)) 0 var(--space-8);
+    }
+
+    .page-header p {
+        font-size: var(--text-base);
+    }
+
+    /* Service Blocks */
+    .service-block {
+        padding: var(--space-8) 0;
+    }
+
+    .service-block__content > p {
+        font-size: var(--text-base);
+    }
+
+    .service-block__image img {
+        height: 250px;
+    }
+
+    /* Pricing */
+    .pricing {
+        padding: var(--space-8);
+    }
+
+    .pricing__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .pricing__item {
+        padding: var(--space-4);
+    }
+
+    .pricing__item-price {
+        font-size: var(--text-2xl);
+    }
+
+    /* About */
+    .about-intro {
+        padding: var(--space-10) 0;
+    }
+
+    .about-intro__image img {
+        height: 280px;
+    }
+
+    .about-intro__content p {
+        font-size: var(--text-base);
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .value-card {
+        padding: var(--space-6);
+    }
+
+    /* Area Detail */
+    .area-detail__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: var(--space-10) 0;
+    }
+
+    .contact-form-wrapper {
+        padding: var(--space-6);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .free-quote {
+        padding: var(--space-6);
+    }
+
+    /* Map */
+    .map-section {
+        padding: var(--space-8) 0;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: var(--space-12) 0 var(--space-6);
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer__brand {
+        grid-column: span 1;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__legal {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    /* Scroll Top */
+    .scroll-top {
+        width: 45px;
+        height: 45px;
+        bottom: var(--space-4);
+        right: var(--space-4);
+    }
+}
+
+/* Small Mobile (max-width: 575px)
+   ========================================================================== */
+@media (max-width: 575px) {
+    /* Container */
+    .container {
+        padding: 0 var(--space-3);
+    }
+
+    /* Typography */
+    h1 {
+        font-size: var(--text-2xl);
+    }
+
+    h2 {
+        font-size: var(--text-xl);
+    }
+
+    /* Hero */
+    .hero__title {
+        font-size: var(--text-2xl);
+    }
+
+    .hero__image img {
+        height: 220px;
+    }
+
+    /* Service Cards */
+    .service-card__icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .service-card__icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Benefits */
+    .benefit-item__icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Contact Info */
+    .contact-info__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Form Controls */
+    .form-control {
+        padding: var(--space-3);
+        font-size: var(--text-base);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: var(--space-3) var(--space-5);
+        font-size: var(--text-sm);
+    }
+
+    .btn--lg {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--text-base);
+    }
+}
+
+/* Touch Device Optimizations
+   ========================================================================== */
+@media (hover: none) {
+    .service-card:hover,
+    .value-card:hover,
+    .benefit-item:hover {
+        transform: none;
+    }
+
+    .nav__link::after {
+        display: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* High Contrast Mode
+   ========================================================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: #000;
+        --color-text-light: #333;
+    }
+
+    .btn {
+        border-width: 3px;
+    }
+
+    .service-card,
+    .value-card,
+    .area-card {
+        border-width: 2px;
+    }
+}
+
+/* Dark Mode Support (Optional - can be enabled later)
+   ========================================================================== */
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-light: #1a202c;
+        --color-white: #2d3748;
+        --color-text: #f7fafc;
+        --color-text-light: #e2e8f0;
+        --color-border: #4a5568;
+    }
+}
+*/
+
+/* Landscape Orientation on Mobile
+   ========================================================================== */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: calc(var(--header-height) + var(--space-6)) 0 var(--space-6);
+    }
+
+    .hero__image img {
+        height: 200px;
+    }
+}
+
+/* Print Enhancements
+   ========================================================================== */
+@media print {
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .hero,
+    .section {
+        page-break-inside: avoid;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    .service-card,
+    .value-card {
+        border: 1px solid #ccc;
+    }
+}
